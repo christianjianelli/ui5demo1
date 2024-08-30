@@ -1,0 +1,20 @@
+{
+    "FunctionalLocations": [
+        {
+            "FunctionalLocationId": "IL-01-01",
+            "FunctionalLocationName": "Loc Inst IL-01-01"
+        },{
+            "FunctionalLocationId": "IL-01-02",
+            "FunctionalLocationName": "Loc Inst IL-01-02"
+        },{
+            "FunctionalLocationId": "IL-01-03",
+            "FunctionalLocationName": "Loc Inst IL-01-03"
+        },{
+            "FunctionalLocationId": "IL-01-04",
+            "FunctionalLocationName": "Loc Inst IL-01-04"
+        },{
+            "FunctionalLocationId": "IL-01-05",
+            "FunctionalLocationName": "Loc Inst IL-01-05"
+        }
+    ]
+}

@@ -1,0 +1,64 @@
+<mvc:View controllerName="jianelli.mock01.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout">
+    <Page id="page" 
+        title="{i18n>title}"
+        class="sapUiContentPadding sapUiResponsivePadding--header sapUiResponsivePadding--content sapUiResponsivePadding--footer">
+        <content>
+            <Panel id="Panel1" width="auto" headerText="Selecionar Equipamento" class="sapUiResponsiveMargin">
+                <content>
+                <l:VerticalLayout id="_IDGenVerticalLayout1" width="100%">
+                    <Label id="_IDGenLabel1" text="{i18n>plant}" labelFor="PlantInput" />
+                    <Input
+                        id="PlantInput"
+                        class="sapUiSmallMarginBottom"
+                        placeholder=""
+                        showSuggestion="true"
+                        showValueHelp="true"
+                        valueHelpRequest=".onPlantValueHelpRequest"
+                        suggestionItems="{plants>/Plants}">
+                        <suggestionItems>
+                            <core:ListItem id="ListItemTxt1" text="{plants>Plant}" additionalText="{plants>PlantName}" />
+                        </suggestionItems>
+                    </Input>
+                    <Label id="_IDGenLabel2" text="{i18n>storageLocation}" labelFor="StorageLocationInput" />
+                    <Input
+                        id="StorageLocationInput"
+                        class="sapUiSmallMarginBottom"
+                        placeholder=""
+                        showSuggestion="true"
+                        showValueHelp="true"
+                        valueHelpRequest=".onStLocValueHelpRequest"
+                        suggestionItems="{storagelocations>/StorageLocations}">
+                        <suggestionItems>
+                            <core:ListItem id="ListItemTxt2" text="{storagelocations>StorageLocationId}" additionalText="{plants>StorageLocationName}" />
+                        </suggestionItems>
+                    </Input>
+                    <Label id="_IDGenLabel3" text="{i18n>functionalLocation}" labelFor="FunctionalLocationInput" />
+                    <Input
+                        id="FunctionalLocationInput"
+                        class="sapUiSmallMarginBottom"
+                        placeholder=""
+                        showSuggestion="true"
+                        showValueHelp="true"
+                        valueHelpRequest=".onFuncLocValueHelpRequest"
+                        suggestionItems="{functionallocations>/FunctionalLocations}">
+                        <suggestionItems>
+                            <core:ListItem id="ListItemTxt3" text="{functionallocations>FunctionalLocationId}" additionalText="{functionallocations>FunctionalLocationName}" />
+                        </suggestionItems>
+                    </Input>
+                </l:VerticalLayout>
+            </content>
+	    </Panel>
+        </content>
+        <footer>
+			<OverflowToolbar id="otbFooter">
+				<ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+				<Button id="_IDGenOverflowToolbarButton1" type="Transparent" text="Reinicializar" press=".onReset" icon="sap-icon://reset"/>
+                <Button id="_IDGenButton1" type="Emphasized" text="Avançar" press=".onSubmit"/>
+			</OverflowToolbar>
+		</footer>
+    </Page>
+</mvc:View>

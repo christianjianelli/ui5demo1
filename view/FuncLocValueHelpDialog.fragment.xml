@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog
+		id="_SHFunctionalLocation"
+		title="Depósitos"
+		items="{functionallocations>/FunctionalLocations}"
+		search=".onFuncLocValueHelpSearch"
+		confirm=".onFuncLocValueHelpClose"
+		cancel=".onFuncLocValueHelpClose">
+		<StandardListItem id="_SHFunctionalLocationStandardList"
+			title="{functionallocations>FunctionalLocationId}"
+			description="{functionallocations>FunctionalLocationName}" />
+	</SelectDialog>
+</core:FragmentDefinition>

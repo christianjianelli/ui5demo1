@@ -1,0 +1,20 @@
+{
+    "StorageLocations": [
+        {
+            "StorageLocationId": "SL01",
+            "StorageLocationName": "Depósito 01"
+        },{
+            "StorageLocationId": "SL02",
+            "StorageLocationName": "Depósito 02"
+        },{
+            "StorageLocationId": "SL03",
+            "StorageLocationName": "Depósito 03"
+        },{
+            "StorageLocationId": "SL04",
+            "StorageLocationName": "Depósito 04"
+        },{
+            "StorageLocationId": "SL05",
+            "StorageLocationName": "Depósito 05"
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog
+		id="_SHStorageLocation"
+		title="Depósitos"
+		items="{storagelocations>/StorageLocations}"
+		search=".onStLocValueHelpSearch"
+		confirm=".onStLocValueHelpClose"
+		cancel=".onStLocValueHelpClose">
+		<StandardListItem id="_SHStorageLocationStandardList"
+			title="{storagelocations>StorageLocationId}"
+			description="{storagelocations>StorageLocationName}" />
+	</SelectDialog>
+</core:FragmentDefinition>

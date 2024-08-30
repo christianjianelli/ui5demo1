@@ -1,0 +1,20 @@
+{
+    "Plants": [
+        {
+            "Plant": "C001",
+            "PlantName": "Centro 001"
+        },{
+            "Plant": "C002",
+            "PlantName": "Centro 002"
+        },{
+            "Plant": "C003",
+            "PlantName": "Centro 003"
+        },{
+            "Plant": "C004",
+            "PlantName": "Centro 004"
+        },{
+            "Plant": "C005",
+            "PlantName": "Centro 005"
+        }
+    ]
+}

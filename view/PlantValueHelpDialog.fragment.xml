@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog
+		id="selectDialog"
+		title="Centros"
+		items="{plants>/Plants}"
+		search=".onPlantValueHelpSearch"
+		confirm=".onPlantValueHelpClose"
+		cancel=".onPlantValueHelpClose">
+		<StandardListItem id="_IDGenStandardListItem1"
+			title="{plants>Plant}"
+			description="{plants>PlantName}" />
+	</SelectDialog>
+</core:FragmentDefinition>
