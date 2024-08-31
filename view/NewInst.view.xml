@@ -1,0 +1,151 @@
+<mvc:View controllerName="jianelli.mock01.controller.NewInst"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout">
+    <Page id="page" 
+        title="{i18n>installationTitle}"
+        class="sapUiContentPadding sapUiResponsivePadding--header sapUiResponsivePadding--content sapUiResponsivePadding--footer"
+        showNavButton="true"
+        navButtonPress=".onNavBackButtonPress">
+        <content>
+            <Panel id="Panel1" width="auto" headerText="{i18n>orderOperEqui}" class="sapUiResponsiveMargin" expandable="true" expanded="true">
+                <content>
+                    <l:VerticalLayout id="_IDGenVerticalLayout1" width="100%">
+                        <Label id="_IDGenLabel1" text="{i18n>order}" labelFor="OrderInput" />
+                        <Input
+                            id="OrderInput"
+                            class="sapUiSmallMarginBottom"
+                            editable="false"
+                            value="{newinst>/Order}">
+                        </Input>
+                        <Label id="_IDGenLabel2" text="{i18n>operation}" labelFor="OperationInput" />
+                        <Input
+                            id="OperationInput"
+                            class="sapUiSmallMarginBottom"
+                            editable="false"
+                            value="{newinst>/Operation}">
+                        </Input>  
+                        <Label id="_IDGenLabel3" text="{i18n>functionalLocation}" labelFor="FunctionalLocationInput" />
+                        <Input
+                            id="FunctionalLocationInput"
+                            class="sapUiSmallMarginBottom"
+                            editable="false"
+                            value="{newinst>/FunctionalLocation}">
+                        </Input>   
+                        <Label id="_IDGenLabel4" text="{i18n>equipment}" labelFor="EquipmentInput" />
+                        <Input
+                            id="EquipmentInput"
+                            class="sapUiSmallMarginBottom"
+                            editable="false"
+                            value="{newinst>/Equipment}">
+                        </Input>   
+                        <Label id="_IDGenLabel5" text="{i18n>origSize}" labelFor="OrigSizeInput" />
+                        <Input
+                            id="OrigSizeInput"
+                            class="sapUiSmallMarginBottom"
+                            editable="false"
+                            value="{newinst>/OrigSize}">
+                        </Input>   
+                        <Label id="_IDGenLabel6" text="{i18n>uom}" labelFor="UomInput" />
+                        <Input
+                            id="UomInput"
+                            class="sapUiSmallMarginBottom"
+                            editable="false"
+                            value="{newinst>/Uom}">
+                        </Input>
+                        <Label id="_IDGenLabel7" text="{i18n>equipmentPre}" labelFor="EquipmentPreInput" />
+                        <Input
+                            id="EquipmentPreInput"
+                            class="sapUiSmallMarginBottom"
+                            editable="false"
+                            value="{newinst>/Uom}">
+                        </Input>    
+                        <Label id="_IDGenLabel8" text="{i18n>equipmentSuc}" labelFor="EquipmentSucInput" />
+                        <Input
+                            id="EquipmentSucInput"
+                            class="sapUiSmallMarginBottom"
+                            editable="false"
+                            value="{newinst>/Uom}">
+                        </Input>                        
+                    </l:VerticalLayout>
+                </content>
+	        </Panel>
+            <Panel id="Panel2" width="auto" headerText="{i18n>ajustDadosLinearLig}" class="sapUiResponsiveMargin" expandable="true" expanded="true">
+                <content>
+                    <l:VerticalLayout id="_IDGenVerticalLayout2" width="100%">
+                        <Label id="_IDGenLabel9" text="{i18n>marcIni}" labelFor="MarcIniInput" />
+                        <Input
+                            id="MarcIniInput"
+                            type="Text"
+                            class="sapUiSmallMarginBottom"
+                            editable="true"
+                            required="true"
+                            value="{newinst>/MarcIni}">
+                        </Input>
+                        <Label id="_IDGenLabel10" text="{i18n>distMarcIni}" labelFor="DistMarcIniInput" />
+                        <Input
+                            id="DistMarcIniInput"
+                            type="Number"
+                            class="sapUiSmallMarginBottom"
+                            editable="true"
+                            required="true"
+                            value="{newinst>/DistMarcIni}">
+                        </Input>
+                        <Label id="_IDGenLabel11" text="{i18n>marcFim}" labelFor="MarcFimInput" />
+                        <Input
+                            id="MarcFimInput"
+                            type="Text"
+                            class="sapUiSmallMarginBottom"
+                            editable="true"
+                            required="true"
+                            value="{newinst>/MarcFim}">
+                        </Input>
+                        <Label id="_IDGenLabel12" text="{i18n>distMarcFim}" labelFor="DistMarcFimInput" />
+                        <Input
+                            id="DistMarcFimInput"
+                            type="Number"   
+                            class="sapUiSmallMarginBottom"
+                            editable="true"
+                            required="true"
+                            value="{newinst>/DistMarcFim}">
+                        </Input>
+                        <Label id="_IDGenLabel14" text="{i18n>installationLength}" labelFor="NewInstLengthInput" />
+                        <Input
+                            id="NewInstLengthInput"
+                            type="Number"   
+                            class="sapUiSmallMarginBottom"
+                            editable="false"
+                            value="{newinst>/DistMarcFim}">
+                        </Input>
+                        <Label id="_IDGenLabel15" text="{i18n>tipoLigIni}" labelFor="_IDGenComboBox1" />
+                        <ComboBox id="_IDGenComboBox1"
+                            value="{newinst>/TipoLigIni}"   
+                            items="{
+                                path: 'weldingtypes>/WeldingTypes',
+                                sorter: { path: 'WeldingTypes' }
+                            }">
+                            <core:Item id="_IDGenItem1" key="{weldingtypes>WeldingType}" text="{weldingtypes>WeldingType}" />
+                        </ComboBox>
+                        <Label id="_IDGenLabel16" text="{i18n>tipoLigFim}" labelFor="_IDGenComboBox2" />
+                        <ComboBox id="_IDGenComboBox2"
+                            value="{newinst>/TipoLigFim}"
+                            items="{
+                                path: 'weldingtypes>/WeldingTypes',
+                                sorter: { path: 'WeldingTypes' }
+                            }">
+                            <core:Item id="_IDGenItem2" key="{weldingtypes>WeldingType}" text="{weldingtypes>WeldingType}" />
+                        </ComboBox>
+                    </l:VerticalLayout>
+                </content>
+	        </Panel>                    
+        </content>
+        <footer>
+            <OverflowToolbar id="otbFooter">
+				<ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+                <Button id="_IDGenButton1" type="Emphasized" text="{i18n>finishInstallation}" press=".onSubmit"/>
+                <ToolbarSpacer id="_IDGenToolbarSpacer2"/>
+			</OverflowToolbar>
+		</footer>
+    </Page>
+</mvc:View>

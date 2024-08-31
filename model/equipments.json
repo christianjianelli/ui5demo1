@@ -1,0 +1,32 @@
+{
+    "Equipments": [
+        {
+            "Equipment": "100000000001",
+            "OrigSize": "0.24",
+            "Uom": "KM",
+            "Split": "NOVO",
+            "Estampa": "3448J83"
+        },
+        {
+            "Equipment": "100000000002",
+            "OrigSize": "0.25",
+            "Uom": "KM",
+            "Split": "USADO",
+            "Estampa": ""
+        },
+        {
+            "Equipment": "100000000003",
+            "OrigSize": "0.3",
+            "Uom": "KM",
+            "Split": "NOVO",
+            "Estampa": ""
+        },
+        {
+            "Equipment": "100000000004",
+            "OrigSize": "0.4",
+            "Uom": "KM",
+            "Split": "USADO",
+            "Estampa": ""
+        }
+    ]
+}

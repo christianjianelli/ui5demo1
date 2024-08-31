@@ -101,10 +101,31 @@
           ]
         },
         {
-          "name": "RouteOrders",
-          "pattern": "orders",
+          "name": "RouteInstallationStart",
+          "pattern": "installationStart",
           "target": [
-            "TargetOrders"
+            "TargetInstallationStart"
+          ]
+        },
+        {
+          "name": "RouteOperations",
+          "pattern": "operations",
+          "target": [
+            "TargetOperations"
+          ]
+        },
+        {
+          "name": "RouteEquipments",
+          "pattern": "equipments",
+          "target": [
+            "TargetEquipments"
+          ]
+        },
+        {
+          "name": "RouteNewInst",
+          "pattern": "newinst",
+          "target": [
+            "TargetNewInst"
           ]
         }
       ],
@@ -116,12 +137,33 @@
           "viewId": "Main",
           "viewName": "Main"
         },
-        "TargetOrders": {
+        "TargetInstallationStart": {
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "Orders",
-          "viewName": "Orders"
+          "viewId": "InstallationStart",
+          "viewName": "InstallationStart"
+        },
+        "TargetOperations": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Operations",
+          "viewName": "Operations"
+        },
+        "TargetEquipments": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Equipments",
+          "viewName": "Equipments"
+        },
+        "TargetNewInst": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "NewInst",
+          "viewName": "NewInst"
         }
       }
     },

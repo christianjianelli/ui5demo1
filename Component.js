@@ -30,14 +30,29 @@ sap.ui.define([
                 // set the device model
                 this.setModel(models.createDeviceModel(), "device");
 
+                // set the work centers model
+                this.setModel(models.createWorkCentersModel(), "workcenters");
+
+                // set the operations model
+                this.setModel(models.createOperationsModel(), "operations");
+
+                // set the equipments model
+                this.setModel(models.createEquipmentsModel(), "equipments");
+
+                // set the weldingtypes model
+                this.setModel(models.createWeldingTypesModel(), "weldingtypes");
+
+                // set the new installation model
+                this.setModel(models.createNewInstModel(), "newinst");                
+                
                 // set the plants model
-                this.setModel(models.createPlantsModel(), "plants");
+                //this.setModel(models.createPlantsModel(), "plants");
 
                 // set the storage locations model
-                this.setModel(models.createStorageLocationsModel(), "storagelocations");
+                //this.setModel(models.createStorageLocationsModel(), "storagelocations");
 
                 // set the functional locations model
-                this.setModel(models.createFunctionalLocationsModel(), "functionallocations");
+                //this.setModel(models.createFunctionalLocationsModel(), "functionallocations");
                 
             }
         });

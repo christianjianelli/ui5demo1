@@ -1,0 +1,19 @@
+{
+    "NewInst":  {
+        "Order": "",
+        "Operation": "",
+        "FunctionalLocation": "",
+        "Equipment": "",
+        "OrigSize": "",
+        "Uom": "",
+        "MarcIni": "",
+        "DistMarcIni": "",
+        "MarcFim": "",
+        "DistMarcFim": "",
+        "NewInstLength": "",
+        "EquipmentPre": "",
+        "EquipmentSuc": "",
+        "TipoLigIni": "",
+        "TipoLigFim": ""
+    }
+}

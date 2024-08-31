@@ -1,0 +1,20 @@
+{
+    "WorkCenters": [
+        {
+            "WorkCenter": "C001",
+            "WorkCenterName": "Centro de Trabalho 001"
+        },{
+            "WorkCenter": "C002",
+            "WorkCenterName": "Centro de Trabalho 002"
+        },{
+            "WorkCenter": "C003",
+            "WorkCenterName": "Centro de Trabalho 003"
+        },{
+            "WorkCenter": "C004",
+            "WorkCenterName": "Centro de Trabalho 004"
+        },{
+            "WorkCenter": "C005",
+            "WorkCenterName": "Centro de Trabalho 005"
+        }
+    ]
+}

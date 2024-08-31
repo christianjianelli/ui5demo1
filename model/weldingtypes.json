@@ -1,0 +1,9 @@
+{
+    "WeldingTypes": [
+        {
+            "WeldingType": "Solda Elétrica"
+        },{
+            "WeldingType": "Solda Aluminotérmica"
+        }
+    ]
+}

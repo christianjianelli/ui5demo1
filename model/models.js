@@ -19,6 +19,24 @@ sap.ui.define([
                 oModel.setDefaultBindingMode("OneWay");
                 return oModel;
             },
+            createWorkCentersModel: function () {
+                var oModel = new JSONModel();
+                oModel.setDefaultBindingMode("OneWay");
+                oModel.loadData("model/workcenters.json");
+                return oModel;
+            },
+            createOperationsModel: function () {
+                var oModel = new JSONModel();
+                oModel.setDefaultBindingMode("OneWay");
+                oModel.loadData("model/operations.json");
+                return oModel;
+            },
+            createEquipmentsModel: function () {
+                var oModel = new JSONModel();
+                oModel.setDefaultBindingMode("OneWay");
+                oModel.loadData("model/equipments.json");
+                return oModel;
+            },
             createPlantsModel: function () {
                 var oModel = new JSONModel();
                 oModel.setDefaultBindingMode("OneWay");
@@ -35,6 +53,18 @@ sap.ui.define([
                 var oModel = new JSONModel();
                 oModel.setDefaultBindingMode("OneWay");
                 oModel.loadData("model/functionallocations.json");
+                return oModel;
+            },
+            createNewInstModel: function () {
+                var oModel = new JSONModel();
+                oModel.setDefaultBindingMode("TwoWay");
+                oModel.loadData("model/newinst.json");
+                return oModel;
+            },
+            createWeldingTypesModel: function () {
+                var oModel = new JSONModel();
+                oModel.setDefaultBindingMode("TwoWay");
+                oModel.loadData("model/weldingtypes.json");
                 return oModel;
             }
         };

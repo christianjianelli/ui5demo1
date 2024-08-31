@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog
+		id="selectDialog"
+		title=""
+		items="{workcenters>/WorkCenters}"
+		search=".onWorkCenterValueHelpSearch"
+		confirm=".onWorkCenterValueHelpClose"
+		cancel=".onWorkCenterValueHelpClose">
+		<StandardListItem id="_IDGenStandardListItem1"
+			title="{workcenters>WorkCenter}"
+			description="{workcenters>WorkCenterName}" />
+	</SelectDialog>
+</core:FragmentDefinition>
