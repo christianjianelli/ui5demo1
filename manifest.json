@@ -127,6 +127,13 @@
           "target": [
             "TargetNewInst"
           ]
+        },
+        {
+          "name": "RouteEquipmentCuts",
+          "pattern": "equipmentcuts",
+          "target": [
+            "TargetEquipmentCuts"
+          ]
         }
       ],
       "targets": {
@@ -164,6 +171,13 @@
           "clearControlAggregation": false,
           "viewId": "NewInst",
           "viewName": "NewInst"
+        },
+        "TargetEquipmentCuts": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "EquipmentCuts",
+          "viewName": "EquipmentCuts"
         }
       }
     },

@@ -1,0 +1,130 @@
+<mvc:View controllerName="jianelli.mock01.controller.EquipmentCuts"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout">
+    <Page id="page" 
+        title="{i18n>installationTitle}"
+        class="sapUiContentPadding sapUiResponsivePadding--header sapUiResponsivePadding--content sapUiResponsivePadding--footer"
+        showNavButton="true"
+        navButtonPress=".onNavBackButtonPress">
+        <content>   
+            <Panel id="Panel1" width="auto" headerText="{i18n>equipmentCutsTitle}" class="sapUiResponsiveMargin" expandable="true" expanded="true">
+                <content>
+                    <l:VerticalLayout id="_IDGenVerticalLayout1" width="100%">
+                        <Label id="_IDGenLabel1" text="{i18n>order}" labelFor="OrderInput" />
+                        <Input
+                            id="OrderInput"
+                            class="sapUiSmallMarginBottom"
+                            editable="false"
+                            value="{newinst>/NewInst/Order}">
+                        </Input>
+                        <Label id="_IDGenLabel2" text="{i18n>operation}" labelFor="OperationInput" />
+                        <Input
+                            id="OperationInput"
+                            class="sapUiSmallMarginBottom"
+                            editable="false"
+                            value="{newinst>/NewInst/Operation}">
+                        </Input>  
+                        <Label id="_IDGenLabel3" text="{i18n>functionalLocation}" labelFor="FunctionalLocationInput" />
+                        <Input
+                            id="FunctionalLocationInput"
+                            class="sapUiSmallMarginBottom"
+                            editable="false"
+                            value="{newinst>/NewInst/FunctionalLocation}">
+                        </Input>   
+                        <Label id="_IDGenLabel4" text="{i18n>equipment}" labelFor="EquipmentInput" />
+                        <Input
+                            id="EquipmentInput"
+                            class="sapUiSmallMarginBottom"
+                            editable="false"
+                            value="{newinst>/NewInst/Equipment}">
+                        </Input>   
+                        <Label id="_IDGenLabel5" text="{i18n>currentSize}" labelFor="CurrentSizeInput" />
+                        <Input
+                            id="CurrentSizeInput"
+                            type="Number"
+                            class="sapUiSmallMarginBottom"
+                            editable="false"
+                            value="{newinst>/NewInst/CurrentSize}">
+                        </Input>   
+                        <Label id="_IDGenLabel6" text="{i18n>uom}" labelFor="UomInput" />
+                        <Input
+                            id="UomInput"
+                            class="sapUiSmallMarginBottom"
+                            editable="false"
+                            value="{newinst>/NewInst/Uom}">
+                        </Input>
+                    </l:VerticalLayout>
+                </content>
+	        </Panel>     
+            <Panel id="Panel2" width="auto" headerText="{i18n>cuts}" class="sapUiResponsiveMargin" expandable="true" expanded="true">
+                <content>
+                    <Table id="idEquipmentsTable"
+                        inset="false"
+                        items="{ 
+                            path: 'equipmentcuts>/EquipmentCuts',
+                            sorter: {
+                                path: 'Equipment'
+                            }
+                        }">
+                        <columns>
+                            <Column id="_IDGenColumn1" width="10em">
+                                <Text id="_IDGenText1" text="{i18n>equipClone}" />
+                            </Column>
+                            <Column id="_IDGenColumn2" width="6em">
+                                <Text id="_IDGenText2" text="{i18n>size}" />
+                            </Column>
+                            <Column id="_IDGenColumn5" width="6em" minScreenWidth="Tablet" demandPopin="true">
+                                <Text id="_IDGenText4" text="{i18n>disposition}" />
+                            </Column>
+                            <Column id="_IDGenColumn6" width="4em">
+                                <Text id="_IDGenText5" text="{i18n>delete}" />
+                            </Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem id="_IDGenColumnListItem1" press=".onItemPress">
+                                <cells>
+                                    <ObjectIdentifier id="_IDGenObjectIdentifier1" title="{equipmentcuts>Equipment}"/>
+                                    <ObjectNumber id="_IDGenObjectNumber1" number="{equipmentcuts>EquipmentSize}"/>
+                                    <Text id="_IDGenText9" text="{equipmentcuts>Disposition}" />
+                                    <Button id="_IDGenButton3" icon="sap-icon://delete" press=".onDeleteCut"></Button>
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                </content>
+	        </Panel>        
+            <Panel id="Panel3" width="auto" headerText="{i18n>cuts}" class="sapUiResponsiveMargin" expandable="true" expanded="true">
+                <content>
+                    <l:VerticalLayout id="_IDGenVerticalLayout2" width="100%">
+                        <Label id="_IDGenLabel14" text="{i18n>length}" labelFor="CutLengthInput" />
+                        <Input
+                            id="CutLengthInput"
+                            type="Number"   
+                            class="sapUiSmallMarginBottom"
+                            editable="true">
+                        </Input>
+                        <Label id="_IDGenLabel16" text="{i18n>disposition}" labelFor="_IDGenComboBox2" />
+                        <ComboBox 
+                            id="DispositionCombo"
+                            class="sapUiSmallMarginBottom"
+                            items="{
+                                path: 'dispositions>/Dispositions'
+                            }">
+                            <core:Item id="_IDGenItem2" key="{dispositions>Disposition}" text="{dispositions>Disposition}" />
+                        </ComboBox>
+                        <Button id="_IDGenButton1" icon="sap-icon://add" type="Default" text="{i18n>addEquipmentCut}" press=".onAddEquipmentCut"/>
+                    </l:VerticalLayout>
+                </content>
+	        </Panel>     
+        </content>
+        <footer>
+            <OverflowToolbar id="otbFooter">
+				<ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+                <Button id="_IDGenButton2" type="Emphasized" icon="sap-icon://complete" text="{i18n>finishInstallation}" press=".onFinishInstallation"/>
+                <ToolbarSpacer id="_IDGenToolbarSpacer2"/>
+			</OverflowToolbar>
+		</footer>
+    </Page>
+</mvc:View>

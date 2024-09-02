@@ -15,6 +15,11 @@ sap.ui.define([
             onNavBackButtonPress: function (oEvent) {
                 let oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			    oRouter.navTo("RouteEquipments");
+            },
+
+            onFinishInstallation: function (oEvent) {
+                let oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			    oRouter.navTo("RouteEquipmentCuts");
             }
         });
     }

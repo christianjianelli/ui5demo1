@@ -53,9 +53,9 @@
                                     <Text id="_IDGenText11" text="{operations>FunctionalLocation}" />
                                     <Text id="_IDGenText12" text="{operations>RefLin}" />
                                     <Text id="_IDGenText13" text="{operations>MarcIni}" />
-                                    <Text id="_IDGenText14" text="{operations>DistMarcIni}" />
+                                    <ObjectNumber id="_IDGenObjectNumber1" number="{operations>DistMarcIni}"/>
                                     <Text id="_IDGenText15" text="{operations>MarcFim}" />
-                                    <Text id="_IDGenText16" text="{operations>DistMarcFim}" />
+                                    <ObjectNumber id="_IDGenObjectNumber2" number="{operations>DistMarcFim}"/>
                                 </cells>
                             </ColumnListItem>
                         </items>

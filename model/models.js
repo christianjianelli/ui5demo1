@@ -66,6 +66,18 @@ sap.ui.define([
                 oModel.setDefaultBindingMode("TwoWay");
                 oModel.loadData("model/weldingtypes.json");
                 return oModel;
+            },
+            createDispositionsModel: function () {
+                var oModel = new JSONModel();
+                oModel.setDefaultBindingMode("TwoWay");
+                oModel.loadData("model/dispositions.json");
+                return oModel;
+            },
+            createEquipmentCutsModel: function () {
+                var oModel = new JSONModel();
+                oModel.setDefaultBindingMode("TwoWay");
+                oModel.loadData("model/equipmentcuts.json");
+                return oModel;
             }
         };
 });

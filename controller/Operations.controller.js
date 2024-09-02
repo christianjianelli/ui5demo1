@@ -27,13 +27,17 @@ sap.ui.define([
 
                 let oData = oModel.getData();
 
-                oData.Order = selectedItem.Order;
-                oData.Operation = selectedItem.Operation;
-                oData.FunctionalLocation = selectedItem.FunctionalLocation;
-                oData.MarcIni = selectedItem.MarcIni;
-                oData.DistMarcIni = selectedItem.DistMarcIni;
-                oData.MarcFim = selectedItem.MarcFim;
-                oData.DistMarcFim = selectedItem.DistMarcFim;
+                oData.NewInst.Order = selectedItem.Order;
+                oData.NewInst.Operation = selectedItem.Operation;
+                oData.NewInst.FunctionalLocation = selectedItem.FunctionalLocation;
+                oData.NewInst.MarcIni = selectedItem.MarcIni;
+                oData.NewInst.DistMarcIni = selectedItem.DistMarcIni;
+                oData.NewInst.MarcFim = selectedItem.MarcFim;
+                oData.NewInst.DistMarcFim = selectedItem.DistMarcFim;
+
+                let nLen = parseFloat(parseFloat(oData.NewInst.DistMarcFim) - parseFloat(oData.NewInst.DistMarcIni));
+
+                oData.NewInst.NewInstLength = nLen.toFixed(2).toString();
 
                 oModel.setData(oData);
 

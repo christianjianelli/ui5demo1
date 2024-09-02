@@ -43,8 +43,14 @@ sap.ui.define([
                 this.setModel(models.createWeldingTypesModel(), "weldingtypes");
 
                 // set the new installation model
-                this.setModel(models.createNewInstModel(), "newinst");                
-                
+                this.setModel(models.createNewInstModel(), "newinst");
+
+                // set the equipment cuts model
+                this.setModel(models.createEquipmentCutsModel(), "equipmentcuts");
+
+                // set the dispositions model
+                this.setModel(models.createDispositionsModel(), "dispositions");
+                                
                 // set the plants model
                 //this.setModel(models.createPlantsModel(), "plants");
 

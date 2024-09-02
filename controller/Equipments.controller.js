@@ -11,10 +11,12 @@ sap.ui.define([
             onInit: function () {
 
             },
+
             onNavBackButtonPress: function (oEvent) {
                 let oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			    oRouter.navTo("RouteOperations");
             },
+
             onItemPress: function (oEvent) {
 
                 let oPath = oEvent.getSource().getBindingContextPath();
@@ -25,9 +27,10 @@ sap.ui.define([
 
                 let oData = oModel.getData();
 
-                oData.Equipment = selectedItem.Equipment;
-                oData.OrigSize = selectedItem.OrigSize;
-                oData.Uom = selectedItem.Uom;
+                oData.NewInst.Equipment = selectedItem.Equipment;
+                oData.NewInst.OrigSize = selectedItem.OrigSize;
+                oData.NewInst.CurrentSize = selectedItem.OrigSize;
+                oData.NewInst.Uom = selectedItem.Uom;
                 
                 oModel.setData(oData);
 

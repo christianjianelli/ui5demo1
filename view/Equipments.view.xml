@@ -40,7 +40,7 @@
                             <ColumnListItem id="_IDGenColumnListItem1" type="Navigation" press=".onItemPress">
                                 <cells>
                                     <ObjectIdentifier id="_IDGenObjectIdentifier1" title="{equipments>Equipment}"/>
-                                    <Text id="_IDGenText6" text="{equipments>OrigSize}" />
+                                    <ObjectNumber id="_IDGenObjectNumber1" number="{equipments>OrigSize}"/>
                                     <Text id="_IDGenText7" text="{equipments>Uom}" />
                                     <Text id="_IDGenText8" text="{equipments>Split}" />
                                     <Text id="_IDGenText9" text="{equipments>Estampa}" />

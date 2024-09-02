@@ -17,56 +17,57 @@
                             id="OrderInput"
                             class="sapUiSmallMarginBottom"
                             editable="false"
-                            value="{newinst>/Order}">
+                            value="{newinst>/NewInst/Order}">
                         </Input>
                         <Label id="_IDGenLabel2" text="{i18n>operation}" labelFor="OperationInput" />
                         <Input
                             id="OperationInput"
                             class="sapUiSmallMarginBottom"
                             editable="false"
-                            value="{newinst>/Operation}">
+                            value="{newinst>/NewInst/Operation}">
                         </Input>  
                         <Label id="_IDGenLabel3" text="{i18n>functionalLocation}" labelFor="FunctionalLocationInput" />
                         <Input
                             id="FunctionalLocationInput"
                             class="sapUiSmallMarginBottom"
                             editable="false"
-                            value="{newinst>/FunctionalLocation}">
+                            value="{newinst>/NewInst/FunctionalLocation}">
                         </Input>   
                         <Label id="_IDGenLabel4" text="{i18n>equipment}" labelFor="EquipmentInput" />
                         <Input
                             id="EquipmentInput"
                             class="sapUiSmallMarginBottom"
                             editable="false"
-                            value="{newinst>/Equipment}">
+                            value="{newinst>/NewInst/Equipment}">
                         </Input>   
                         <Label id="_IDGenLabel5" text="{i18n>origSize}" labelFor="OrigSizeInput" />
                         <Input
                             id="OrigSizeInput"
+                            type="Number"
                             class="sapUiSmallMarginBottom"
                             editable="false"
-                            value="{newinst>/OrigSize}">
+                            value="{newinst>/NewInst/OrigSize}">
                         </Input>   
                         <Label id="_IDGenLabel6" text="{i18n>uom}" labelFor="UomInput" />
                         <Input
                             id="UomInput"
                             class="sapUiSmallMarginBottom"
                             editable="false"
-                            value="{newinst>/Uom}">
+                            value="{newinst>/NewInst/Uom}">
                         </Input>
                         <Label id="_IDGenLabel7" text="{i18n>equipmentPre}" labelFor="EquipmentPreInput" />
                         <Input
                             id="EquipmentPreInput"
                             class="sapUiSmallMarginBottom"
                             editable="false"
-                            value="{newinst>/Uom}">
+                            value="{newinst>/NewInst/EquipmentPre}">
                         </Input>    
                         <Label id="_IDGenLabel8" text="{i18n>equipmentSuc}" labelFor="EquipmentSucInput" />
                         <Input
                             id="EquipmentSucInput"
                             class="sapUiSmallMarginBottom"
                             editable="false"
-                            value="{newinst>/Uom}">
+                            value="{newinst>/NewInst/EquipmentSuc}">
                         </Input>                        
                     </l:VerticalLayout>
                 </content>
@@ -81,7 +82,7 @@
                             class="sapUiSmallMarginBottom"
                             editable="true"
                             required="true"
-                            value="{newinst>/MarcIni}">
+                            value="{newinst>/NewInst/MarcIni}">
                         </Input>
                         <Label id="_IDGenLabel10" text="{i18n>distMarcIni}" labelFor="DistMarcIniInput" />
                         <Input
@@ -90,7 +91,7 @@
                             class="sapUiSmallMarginBottom"
                             editable="true"
                             required="true"
-                            value="{newinst>/DistMarcIni}">
+                            value="{newinst>/NewInst/DistMarcIni}">
                         </Input>
                         <Label id="_IDGenLabel11" text="{i18n>marcFim}" labelFor="MarcFimInput" />
                         <Input
@@ -99,7 +100,7 @@
                             class="sapUiSmallMarginBottom"
                             editable="true"
                             required="true"
-                            value="{newinst>/MarcFim}">
+                            value="{newinst>/NewInst/MarcFim}">
                         </Input>
                         <Label id="_IDGenLabel12" text="{i18n>distMarcFim}" labelFor="DistMarcFimInput" />
                         <Input
@@ -108,7 +109,7 @@
                             class="sapUiSmallMarginBottom"
                             editable="true"
                             required="true"
-                            value="{newinst>/DistMarcFim}">
+                            value="{newinst>/NewInst/DistMarcFim}">
                         </Input>
                         <Label id="_IDGenLabel14" text="{i18n>installationLength}" labelFor="NewInstLengthInput" />
                         <Input
@@ -116,11 +117,11 @@
                             type="Number"   
                             class="sapUiSmallMarginBottom"
                             editable="false"
-                            value="{newinst>/DistMarcFim}">
+                            value="{newinst>/NewInst/NewInstLength}">
                         </Input>
                         <Label id="_IDGenLabel15" text="{i18n>tipoLigIni}" labelFor="_IDGenComboBox1" />
                         <ComboBox id="_IDGenComboBox1"
-                            value="{newinst>/TipoLigIni}"   
+                            value="{newinst>/NewInst/TipoLigIni}"   
                             items="{
                                 path: 'weldingtypes>/WeldingTypes',
                                 sorter: { path: 'WeldingTypes' }
@@ -129,7 +130,7 @@
                         </ComboBox>
                         <Label id="_IDGenLabel16" text="{i18n>tipoLigFim}" labelFor="_IDGenComboBox2" />
                         <ComboBox id="_IDGenComboBox2"
-                            value="{newinst>/TipoLigFim}"
+                            value="{newinst>/NewInst/TipoLigFim}"
                             items="{
                                 path: 'weldingtypes>/WeldingTypes',
                                 sorter: { path: 'WeldingTypes' }
@@ -143,7 +144,7 @@
         <footer>
             <OverflowToolbar id="otbFooter">
 				<ToolbarSpacer id="_IDGenToolbarSpacer1"/>
-                <Button id="_IDGenButton1" type="Emphasized" text="{i18n>finishInstallation}" press=".onSubmit"/>
+                <Button id="_IDGenButton1" type="Emphasized" icon="sap-icon://complete" text="{i18n>finishInstallation}" press=".onFinishInstallation"/>
                 <ToolbarSpacer id="_IDGenToolbarSpacer2"/>
 			</OverflowToolbar>
 		</footer>

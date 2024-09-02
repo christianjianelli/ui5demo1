@@ -1,13 +1,11 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
-    "sap/ui/core/Fragment",
-	"sap/ui/model/Filter",
-    "sap/ui/model/FilterOperator"
+    "sap/m/MessageToast"
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller, Fragment, Filter, FilterOperator) {
+    function (Controller, MessageToast) {
         "use strict";
 
         return Controller.extend("jianelli.mock01.controller.Main", {
@@ -21,6 +19,14 @@ sap.ui.define([
                 let oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			    oRouter.navTo("RouteInstallationStart");
 
+            },
+
+            onLaunchUninstallation: function () {
+                MessageToast.show("Funcionalidade ainda não implementada.");
+            },
+
+            onLaunchReplacement: function () {
+                MessageToast.show("Funcionalidade ainda não implementada.");            
             }
 
         });
