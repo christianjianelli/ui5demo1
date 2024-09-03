@@ -48,6 +48,14 @@
                             editable="false"
                             value="{newinst>/NewInst/CurrentSize}">
                         </Input>   
+                        <Label id="_LabelNewInstLengthInput" text="{i18n>installationLength}" labelFor="NewInstLengthInput" />
+                        <Input
+                            id="NewInstLengthInput"
+                            type="Number"   
+                            class="sapUiSmallMarginBottom"
+                            editable="false"
+                            value="{newinst>/NewInst/NewInstLength}">
+                        </Input>
                         <Label id="_IDGenLabel6" text="{i18n>uom}" labelFor="UomInput" />
                         <Input
                             id="UomInput"

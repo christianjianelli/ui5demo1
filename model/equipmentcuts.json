@@ -2,7 +2,7 @@
     "EquipmentCuts": [
         {
             "Equipment": "",
-            "EquipmentSize": "",
+            "EquipmentSize": 0,
             "Disposition": ""
         }
     ]

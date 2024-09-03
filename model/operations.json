@@ -6,9 +6,9 @@
             "FunctionalLocation": "MF-LFA-FIR_FIR-L000001-FILADIR",
             "RefLin": "RMLFA",
             "MarcIni": "KM51",
-            "DistMarcIni": "0.409",
+            "DistMarcIni": 0.409,
             "MarcFim": "KM51",
-            "DistMarcFim": "0.649"
+            "DistMarcFim": 0.649
         },
         {
             "Order": "21185705",
@@ -16,9 +16,9 @@
             "FunctionalLocation": "MF-LFA-FIR_FIR-L000001-FILADIR",
             "RefLin": "RMLFA",
             "MarcIni": "KM55",
-            "DistMarcIni": "0.3",
+            "DistMarcIni": 0.3,
             "MarcFim": "KM55",
-            "DistMarcFim": "0.54"
+            "DistMarcFim": 0.54
         },
         {
             "Order": "21185706",
@@ -26,9 +26,9 @@
             "FunctionalLocation": "MF-LFA-FIR_FIR-L000001-FILADIR",
             "RefLin": "RMLFA",
             "MarcIni": "KM45",
-            "DistMarcIni": "0.3",
+            "DistMarcIni": 0.3,
             "MarcFim": "KM45",
-            "DistMarcFim": "0.54"
+            "DistMarcFim": 0.54
         },
         {
             "Order": "21185707",
@@ -36,9 +36,9 @@
             "FunctionalLocation": "MF-LFA-FIR_FIR-L000001-FILADIR",
             "RefLin": "RMLFA",
             "MarcIni": "KM46",
-            "DistMarcIni": "0.3",
+            "DistMarcIni": 0.3,
             "MarcFim": "KM46",
-            "DistMarcFim": "0.54"
+            "DistMarcFim": 0.54
         }
     ]
 }

@@ -9,7 +9,7 @@ sap.ui.define([
 
         return Controller.extend("jianelli.mock01.controller.Equipments", {
             onInit: function () {
-
+                this.getView().addStyleClass("sapUiSizeCozy");
             },
 
             onNavBackButtonPress: function (oEvent) {
@@ -31,6 +31,8 @@ sap.ui.define([
                 oData.NewInst.OrigSize = selectedItem.OrigSize;
                 oData.NewInst.CurrentSize = selectedItem.OrigSize;
                 oData.NewInst.Uom = selectedItem.Uom;
+                oData.NewInst.EquipmentPre = selectedItem.EquipmentPre;
+                oData.NewInst.EquipmentSuc = selectedItem.EquipmentSuc;
                 
                 oModel.setData(oData);
 

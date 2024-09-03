@@ -91,6 +91,7 @@
                             class="sapUiSmallMarginBottom"
                             editable="true"
                             required="true"
+                            change=".onRecalculateInstallationLength"
                             value="{newinst>/NewInst/DistMarcIni}">
                         </Input>
                         <Label id="_IDGenLabel11" text="{i18n>marcFim}" labelFor="MarcFimInput" />
@@ -109,6 +110,7 @@
                             class="sapUiSmallMarginBottom"
                             editable="true"
                             required="true"
+                            change=".onRecalculateInstallationLength"
                             value="{newinst>/NewInst/DistMarcFim}">
                         </Input>
                         <Label id="_IDGenLabel14" text="{i18n>installationLength}" labelFor="NewInstLengthInput" />
@@ -122,6 +124,7 @@
                         <Label id="_IDGenLabel15" text="{i18n>tipoLigIni}" labelFor="_IDGenComboBox1" />
                         <ComboBox id="_IDGenComboBox1"
                             value="{newinst>/NewInst/TipoLigIni}"   
+                            required="true"
                             items="{
                                 path: 'weldingtypes>/WeldingTypes',
                                 sorter: { path: 'WeldingTypes' }
@@ -131,6 +134,7 @@
                         <Label id="_IDGenLabel16" text="{i18n>tipoLigFim}" labelFor="_IDGenComboBox2" />
                         <ComboBox id="_IDGenComboBox2"
                             value="{newinst>/NewInst/TipoLigFim}"
+                            required="true"
                             items="{
                                 path: 'weldingtypes>/WeldingTypes',
                                 sorter: { path: 'WeldingTypes' }

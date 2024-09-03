@@ -51,15 +51,6 @@ sap.ui.define([
                 // set the dispositions model
                 this.setModel(models.createDispositionsModel(), "dispositions");
                                 
-                // set the plants model
-                //this.setModel(models.createPlantsModel(), "plants");
-
-                // set the storage locations model
-                //this.setModel(models.createStorageLocationsModel(), "storagelocations");
-
-                // set the functional locations model
-                //this.setModel(models.createFunctionalLocationsModel(), "functionallocations");
-                
             }
         });
     }

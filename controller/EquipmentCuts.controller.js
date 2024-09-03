@@ -1,7 +1,7 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/m/MessageBox",
-    "sap/m/MessageToast",
+    "sap/m/MessageToast"
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
@@ -11,7 +11,7 @@ sap.ui.define([
 
         return Controller.extend("jianelli.mock01.controller.EquipmentCuts", {
             onInit: function () {
-
+                this.getView().addStyleClass("sapUiSizeCozy");
             },
 
             onNavBackButtonPress: function (oEvent) {
@@ -27,6 +27,18 @@ sap.ui.define([
                     "A instalação será finalizada. Deseja avançar?", {
                         onClose: function(oAction){
                             if(oAction.toString() === "OK" ){
+
+                                let oModelNewInst = that.getView().getModel("newinst");
+
+                                if(oModelNewInst){
+                                    oModelNewInst.setData(that._resetNewInstModel());
+                                }
+
+                                let oModelEquipmentCuts = that.getView().getModel("equipmentcuts");
+
+                                if(oModelEquipmentCuts){
+                                    oModelEquipmentCuts.setData(that._resetEquipmentCutsModel());
+                                }
 
                                 MessageToast.show("Instalação finalizada com sucesso!", {
                                     onClose: function(){
@@ -193,6 +205,8 @@ sap.ui.define([
                         
                     });
 
+                    currentSize = currentSize.toFixed(3);
+
                 }
 
                 let oModelNewInst = this.getView().getModel("newinst");
@@ -203,11 +217,50 @@ sap.ui.define([
 
                     oDataNewInst.NewInst.CurrentSize = parseFloat(oDataNewInst.NewInst.OrigSize) - currentSize;
 
-                    oDataNewInst.NewInst.CurrentSize = oDataNewInst.NewInst.CurrentSize.toFixed(2);
+                    oDataNewInst.NewInst.CurrentSize = oDataNewInst.NewInst.CurrentSize.toFixed(3);
 
                     oModelNewInst.setData(oDataNewInst);
 
                 }
+
+            },
+
+            _resetNewInstModel: function(){
+
+                return {
+                    "NewInst":  {
+                        "Order": "",
+                        "Operation": "",
+                        "FunctionalLocation": "",
+                        "Equipment": "",
+                        "OrigSize": 0,
+                        "CurrentSize": 0,
+                        "Uom": "",
+                        "MarcIni": "",
+                        "DistMarcIni": 0,
+                        "MarcFim": "",
+                        "DistMarcFim": 0,
+                        "NewInstLength": 0,
+                        "EquipmentPre": "",
+                        "EquipmentSuc": "",
+                        "TipoLigIni": "",
+                        "TipoLigFim": ""
+                    }
+                };
+
+            },
+
+            _resetEquipmentCutsModel: function(){
+
+                return {
+                    "EquipmentCuts": [
+                        {
+                            "Equipment": "",
+                            "EquipmentSize": 0,
+                            "Disposition": ""
+                        }
+                    ]
+                };
 
             }
 

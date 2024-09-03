@@ -13,7 +13,7 @@ sap.ui.define([
         return Controller.extend("jianelli.mock01.controller.InstallationStart", {
             
             onInit: function () {
-
+                this.getView().addStyleClass("sapUiSizeCozy");
             },
 
             onSubmit: function () {

@@ -9,7 +9,7 @@ sap.ui.define([
 
         return Controller.extend("jianelli.mock01.controller.Operations", {
             onInit: function () {
-
+                this.getView().addStyleClass("sapUiSizeCozy");
             },
 
             onNavBackButtonPress: function (oEvent) {

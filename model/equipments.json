@@ -2,31 +2,39 @@
     "Equipments": [
         {
             "Equipment": "100000000001",
-            "OrigSize": "0.24",
+            "OrigSize": 0.24,
             "Uom": "KM",
             "Split": "NOVO",
-            "Estampa": "3448J83"
+            "Estampa": "3448J83",
+            "EquipmentPre": "100000000000",
+            "EquipmentSuc": "100000000002"
         },
         {
             "Equipment": "100000000002",
-            "OrigSize": "0.25",
+            "OrigSize": 0.25,
             "Uom": "KM",
             "Split": "USADO",
-            "Estampa": ""
+            "Estampa": "",
+            "EquipmentPre": "100000000001",
+            "EquipmentSuc": "100000000003"
         },
         {
             "Equipment": "100000000003",
-            "OrigSize": "0.3",
+            "OrigSize": 0.3,
             "Uom": "KM",
             "Split": "NOVO",
-            "Estampa": ""
+            "Estampa": "",
+            "EquipmentPre": "100000000002",
+            "EquipmentSuc": "100000000004"
         },
         {
             "Equipment": "100000000004",
-            "OrigSize": "0.4",
+            "OrigSize": 0.4,
             "Uom": "KM",
             "Split": "USADO",
-            "Estampa": ""
+            "Estampa": "",
+            "EquipmentPre": "100000000003",
+            "EquipmentSuc": "100000000005"
         }
     ]
 }
