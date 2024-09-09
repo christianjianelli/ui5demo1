@@ -29,6 +29,7 @@
                                         width="8em"
                                         placeholder="{i18n>equipmentCode}">
                                     </Input> 
+                                    <ToolbarSpacer id="_IDGenToolbarSpacer"/>
                                     <Label id="_IDGenLabel4ab" text="{i18n>Split}:" labelFor="idSplitFilter"/>
                                     <ComboBox id="idSplitFilter" placeholder="{i18n>Split}" width="6em">
                                         <items>
@@ -36,6 +37,7 @@
                                             <core:Item id="_IDGenItem4" text="Usado" key="Usado"/>
                                         </items>
                                     </ComboBox> 
+                                    <ToolbarSpacer id="_IDGenToolbarSpacer3"/>
                                     <Button id="_IDGenButton2filter" type="Emphasized" icon="sap-icon://filter" text="Filtrar" press=".onSetFilter"/>
                                     <Button id="_IDGenButtonClearFilters" type="Default" icon="sap-icon://clear-filter" press=".onClearFilters"/>
                                 </content>
