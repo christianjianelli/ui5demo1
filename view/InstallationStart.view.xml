@@ -3,16 +3,16 @@
     xmlns="sap.m"
     xmlns:core="sap.ui.core"
     xmlns:l="sap.ui.layout">
-    <Page id="page" 
+    <Page id="pageis" 
         title="{i18n>installationTitle}"
         class="sapUiContentPadding sapUiResponsivePadding--header sapUiResponsivePadding--content sapUiResponsivePadding--footer"
         showNavButton="true"
         navButtonPress=".onNavBackButtonPress">
         <content>
-            <Panel id="Panel1" width="auto" headerText="{i18n>filterOrders}" class="sapUiResponsiveMargin">
+            <Panel id="Panel1is" width="auto" headerText="{i18n>filterOrders}" class="sapUiResponsiveMargin">
                 <content>
-                <l:VerticalLayout id="_IDGenVerticalLayout1" width="100%">
-                    <Label id="_IDGenLabel1" text="{i18n>workCenter}" labelFor="WorkCenterInput" />
+                <l:VerticalLayout id="_IDGenVerticalLayout1is" width="100%">
+                    <Label id="_IDGenLabel1is" text="{i18n>workCenter}" labelFor="WorkCenterInput" />
                     <Input
                         id="WorkCenterInput"
                         class="sapUiSmallMarginBottom"
@@ -25,14 +25,14 @@
                             <core:ListItem id="ListItemTxt1" text="{workcenters>WorkCenter}" additionalText="{workcenters>WorkCenterName}" />
                         </suggestionItems>
                     </Input>
-                    <Label id="_IDGenLabel2" text="{i18n>dateFrom}" labelFor="DatePickerFrom"/>
+                    <Label id="_IDGenLabel2is" text="{i18n>dateFrom}" labelFor="DatePickerFrom"/>
                     <DatePicker
                         id="DatePickerFrom"
                         placeholder=""
                         change="handleChange"
                         class="sapUiSmallMarginBottom"/>
 
-                    <Label id="_IDGenLabel3" text="{i18n>dateTo}" labelFor="DatePickerTo"/>
+                    <Label id="_IDGenLabel3is" text="{i18n>dateTo}" labelFor="DatePickerTo"/>
                     <DatePicker
                         id="DatePickerTo"
                         placeholder=""
@@ -43,11 +43,11 @@
 	    </Panel>
         </content>
         <footer>
-			<OverflowToolbar id="otbFooter">
-				<ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+			<OverflowToolbar id="otbFooteris">
+				<ToolbarSpacer id="_IDGenToolbarSpacer1is"/>
 				<Button id="_IDGenOverflowToolbarButton1" type="Transparent" text="Reinicializar" press=".onReset" icon="sap-icon://reset"/>
-                <Button id="_IDGenButton1" type="Emphasized" text="Avançar" press=".onSubmit"/>
-                <ToolbarSpacer id="_IDGenToolbarSpacer2"/>
+                <Button id="_IDGenButton1is" type="Emphasized" text="Avançar" press=".onSubmit"/>
+                <ToolbarSpacer id="_IDGenToolbarSpacer2is"/>
 			</OverflowToolbar>
 		</footer>
     </Page>

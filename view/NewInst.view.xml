@@ -3,44 +3,44 @@
     xmlns="sap.m"
     xmlns:core="sap.ui.core"
     xmlns:l="sap.ui.layout">
-    <Page id="page" 
+    <Page id="pageni" 
         title="{i18n>installationTitle}"
         class="sapUiContentPadding sapUiResponsivePadding--header sapUiResponsivePadding--content sapUiResponsivePadding--footer"
         showNavButton="true"
         navButtonPress=".onNavBackButtonPress">
         <content>
-            <Panel id="Panel1" width="auto" headerText="{i18n>orderOperEqui}" class="sapUiResponsiveMargin" expandable="true" expanded="true">
+            <Panel id="Panel1b" width="auto" headerText="{i18n>orderOperEqui}" class="sapUiResponsiveMargin" expandable="true" expanded="true">
                 <content>
-                    <l:VerticalLayout id="_IDGenVerticalLayout1" width="100%">
-                        <Label id="_IDGenLabel1" text="{i18n>order}" labelFor="OrderInput" />
+                    <l:VerticalLayout id="_IDGenVerticalLayout1a" width="100%">
+                        <Label id="_IDGenLabel1a" text="{i18n>order}" labelFor="OrderInput" />
                         <Input
-                            id="OrderInput"
+                            id="OrderInputb"
                             class="sapUiSmallMarginBottom"
                             editable="false"
                             value="{newinst>/NewInst/Order}">
                         </Input>
-                        <Label id="_IDGenLabel2" text="{i18n>operation}" labelFor="OperationInput" />
+                        <Label id="_IDGenLabel2a" text="{i18n>operation}" labelFor="OperationInput" />
                         <Input
-                            id="OperationInput"
+                            id="OperationInputb"
                             class="sapUiSmallMarginBottom"
                             editable="false"
                             value="{newinst>/NewInst/Operation}">
                         </Input>  
-                        <Label id="_IDGenLabel3" text="{i18n>functionalLocation}" labelFor="FunctionalLocationInput" />
+                        <Label id="_IDGenLabel3a" text="{i18n>functionalLocation}" labelFor="FunctionalLocationInput" />
                         <Input
-                            id="FunctionalLocationInput"
+                            id="FunctionalLocationInputb"
                             class="sapUiSmallMarginBottom"
                             editable="false"
                             value="{newinst>/NewInst/FunctionalLocation}">
                         </Input>   
-                        <Label id="_IDGenLabel4" text="{i18n>equipment}" labelFor="EquipmentInput" />
+                        <Label id="_IDGenLabel4b" text="{i18n>equipment}" labelFor="EquipmentInput" />
                         <Input
-                            id="EquipmentInput"
+                            id="EquipmentInputb"
                             class="sapUiSmallMarginBottom"
                             editable="false"
                             value="{newinst>/NewInst/Equipment}">
                         </Input>   
-                        <Label id="_IDGenLabel5" text="{i18n>origSize}" labelFor="OrigSizeInput" />
+                        <Label id="_IDGenLabel5a" text="{i18n>origSize}" labelFor="OrigSizeInput" />
                         <Input
                             id="OrigSizeInput"
                             type="Number"
@@ -48,9 +48,9 @@
                             editable="false"
                             value="{newinst>/NewInst/OrigSize}">
                         </Input>   
-                        <Label id="_IDGenLabel6" text="{i18n>uom}" labelFor="UomInput" />
+                        <Label id="_IDGenLabel6a" text="{i18n>uom}" labelFor="UomInput" />
                         <Input
-                            id="UomInput"
+                            id="UomInputb"
                             class="sapUiSmallMarginBottom"
                             editable="false"
                             value="{newinst>/NewInst/Uom}">
@@ -72,9 +72,9 @@
                     </l:VerticalLayout>
                 </content>
 	        </Panel>
-            <Panel id="Panel2" width="auto" headerText="{i18n>ajustDadosLinearLig}" class="sapUiResponsiveMargin" expandable="true" expanded="true">
+            <Panel id="Panel2a" width="auto" headerText="{i18n>ajustDadosLinearLig}" class="sapUiResponsiveMargin" expandable="true" expanded="true">
                 <content>
-                    <l:VerticalLayout id="_IDGenVerticalLayout2" width="100%">
+                    <l:VerticalLayout id="_IDGenVerticalLayout2a" width="100%">
                         <Label id="_IDGenLabel9" text="{i18n>marcIni}" labelFor="MarcIniInput" />
                         <Input
                             id="MarcIniInput"
@@ -113,9 +113,9 @@
                             change=".onRecalculateInstallationLength"
                             value="{newinst>/NewInst/DistMarcFim}">
                         </Input>
-                        <Label id="_IDGenLabel14" text="{i18n>installationLength}" labelFor="NewInstLengthInput" />
+                        <Label id="_IDGenLabel14a" text="{i18n>installationLength}" labelFor="NewInstLengthInput" />
                         <Input
-                            id="NewInstLengthInput"
+                            id="NewInstLengthInputa"
                             type="Number"   
                             class="sapUiSmallMarginBottom"
                             editable="false"
@@ -131,7 +131,7 @@
                             }">
                             <core:Item id="_IDGenItem1" key="{weldingtypes>WeldingType}" text="{weldingtypes>WeldingType}" />
                         </ComboBox>
-                        <Label id="_IDGenLabel16" text="{i18n>tipoLigFim}" labelFor="_IDGenComboBox2" />
+                        <Label id="_IDGenLabel16a" text="{i18n>tipoLigFim}" labelFor="_IDGenComboBox2" />
                         <ComboBox id="_IDGenComboBox2"
                             value="{newinst>/NewInst/TipoLigFim}"
                             required="true"
@@ -139,17 +139,23 @@
                                 path: 'weldingtypes>/WeldingTypes',
                                 sorter: { path: 'WeldingTypes' }
                             }">
-                            <core:Item id="_IDGenItem2" key="{weldingtypes>WeldingType}" text="{weldingtypes>WeldingType}" />
+                            <core:Item id="_IDGenItem2a" key="{weldingtypes>WeldingType}" text="{weldingtypes>WeldingType}" />
                         </ComboBox>
                     </l:VerticalLayout>
                 </content>
 	        </Panel>                    
         </content>
         <footer>
-            <OverflowToolbar id="otbFooter">
-				<ToolbarSpacer id="_IDGenToolbarSpacer1"/>
-                <Button id="_IDGenButton1" type="Emphasized" icon="sap-icon://complete" text="{i18n>finishInstallation}" press=".onFinishInstallation"/>
-                <ToolbarSpacer id="_IDGenToolbarSpacer2"/>
+            <OverflowToolbar id="otbFootera">
+				<ToolbarSpacer id="_IDGenToolbarSpacer1a"/>
+                <Button id="_IDGenButton1b"
+                    icon="sap-icon://alert"
+                    text="{= ${messages>/}.length }"
+                    visible="{= ${messages>/}.length > 0 }"
+                    type="Transparent"
+                    press="onMessagePopoverPress" />
+                <Button id="_IDGenButton1a" type="Emphasized" icon="sap-icon://complete" text="{i18n>finishInstallation}" press=".onFinishInstallation"/>
+                <ToolbarSpacer id="_IDGenToolbarSpacer2a"/>
 			</OverflowToolbar>
 		</footer>
     </Page>

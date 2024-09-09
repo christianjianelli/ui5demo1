@@ -3,7 +3,7 @@
     xmlns="sap.m"
     xmlns:core="sap.ui.core"
     xmlns:l="sap.ui.layout">
-    <Page id="page" 
+    <Page id="pageeqc" 
         title="{i18n>installationTitle}"
         class="sapUiContentPadding sapUiResponsivePadding--header sapUiResponsivePadding--content sapUiResponsivePadding--footer"
         showNavButton="true"
@@ -77,24 +77,24 @@
                             }
                         }">
                         <columns>
-                            <Column id="_IDGenColumn1" width="10em">
-                                <Text id="_IDGenText1" text="{i18n>equipClone}" />
+                            <Column id="_IDGenColumn1eqc" width="10em">
+                                <Text id="_IDGenText1eqc" text="{i18n>equipClone}" />
                             </Column>
-                            <Column id="_IDGenColumn2" width="6em">
-                                <Text id="_IDGenText2" text="{i18n>size}" />
+                            <Column id="_IDGenColumn2eqc" width="6em">
+                                <Text id="_IDGenText2eqc" text="{i18n>size}" />
                             </Column>
-                            <Column id="_IDGenColumn5" width="6em" minScreenWidth="Tablet" demandPopin="true">
-                                <Text id="_IDGenText4" text="{i18n>disposition}" />
+                            <Column id="_IDGenColumn5eqc" width="6em" minScreenWidth="Tablet" demandPopin="true">
+                                <Text id="_IDGenText4eqc" text="{i18n>disposition}" />
                             </Column>
-                            <Column id="_IDGenColumn6" width="4em">
-                                <Text id="_IDGenText5" text="{i18n>delete}" />
+                            <Column id="_IDGenColumn6eqc" width="5em">
+                                <Text id="_IDGenText5eqc" text="{i18n>delete}" />
                             </Column>
                         </columns>
                         <items>
-                            <ColumnListItem id="_IDGenColumnListItem1" press=".onItemPress">
+                            <ColumnListItem id="_IDGenColumnListItem1eqc" press=".onItemPress">
                                 <cells>
-                                    <ObjectIdentifier id="_IDGenObjectIdentifier1" title="{equipmentcuts>Equipment}"/>
-                                    <ObjectNumber id="_IDGenObjectNumber1" number="{equipmentcuts>EquipmentSize}"/>
+                                    <ObjectIdentifier id="_IDGenObjectIdentifier1eqc" title="{equipmentcuts>Equipment}"/>
+                                    <ObjectNumber id="_IDGenObjectNumber1eqc" number="{equipmentcuts>EquipmentSize}"/>
                                     <Text id="_IDGenText9" text="{equipmentcuts>Disposition}" />
                                     <Button id="_IDGenButton3" icon="sap-icon://delete" press=".onDeleteCut"></Button>
                                 </cells>

@@ -1,17 +1,35 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/m/MessageBox",
-    "sap/m/MessageToast"
+    "sap/m/MessageToast",
+    "sap/ui/core/message/Message",
+    "sap/ui/model/json/JSONModel",
+    "sap/ui/core/library"
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller, MessageBox, MessageToast) {
+    function (Controller, MessageBox, MessageToast, Message, JSONModel, library) {
         "use strict";
 
         return Controller.extend("jianelli.mock01.controller.NewInst", {
             onInit: function () {
-                this.getView().addStyleClass("sapUiSizeCozy");
+                
+                //this.getView().addStyleClass("sapUiSizeCozy");
+
+                var oMessageManager, oModel, oView;
+
+                oView = this.getView();
+
+                // set message model
+                oMessageManager = sap.ui.getCore().getMessageManager();
+                oView.setModel(oMessageManager.getMessageModel(), "messages");
+
+                // or just do it for the whole view
+                oMessageManager.registerObject(oView, true);
+
+
+
             },
 
             onNavBackButtonPress: function (oEvent) {
@@ -97,7 +115,22 @@ sap.ui.define([
 
                 }
 
+                var oMessage = new Message({
+                    message: "My generated info message",
+                    type: library.MessageType.Information,
+                    target: "/Dummy",
+                    processor: this.getView().getModel()
+                });
+
+                sap.ui.getCore().getMessageManager().addMessages(oMessage);
+
             },
+
+            onMessagePopoverPress : function (oEvent) {
+                this._getMessagePopover().openBy(oEvent.getSource());
+            },
+
+            //################ Private ###################
 
             _resetNewInstModel: function(){
 
@@ -122,6 +155,15 @@ sap.ui.define([
                     }
                 }
 
+            },
+
+            _getMessagePopover : function () {
+                // create popover lazily (singleton)
+                if (!this._oMessagePopover) {
+                    this._oMessagePopover = sap.ui.xmlfragment(this.getView().getId(),"jianelli.mock01.view.MessagePopover", this);
+                    this.getView().addDependent(this._oMessagePopover);
+                }
+                return this._oMessagePopover;
             }
         });
     }
