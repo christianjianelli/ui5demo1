@@ -1,0 +1,11 @@
+{
+    "name": "Manutenção de Trilhos",
+    "start_url": "https://christianjianelli.github.io/ui5demo1/",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "img/logo.svg",
+            "sizes": "any"
+        }
+    ]
+  }

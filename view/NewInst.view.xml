@@ -75,25 +75,29 @@
             <Panel id="Panel2a" width="auto" headerText="{i18n>ajustDadosLinearLig}" class="sapUiResponsiveMargin" expandable="true" expanded="true">
                 <content>
                     <l:VerticalLayout id="_IDGenVerticalLayout2a" width="100%">
-                        <Label id="_IDGenLabel9" text="{i18n>marcIni}" labelFor="MarcIniInput" />
-                        <Input
-                            id="MarcIniInput"
-                            type="Text"
-                            class="sapUiSmallMarginBottom"
-                            editable="true"
-                            required="true"
-                            value="{newinst>/NewInst/MarcIni}">
-                        </Input>
-                        <Label id="_IDGenLabel10" text="{i18n>distMarcIni}" labelFor="DistMarcIniInput" />
-                        <Input
-                            id="DistMarcIniInput"
-                            type="Number"
-                            class="sapUiSmallMarginBottom"
-                            editable="true"
-                            required="true"
-                            change=".onRecalculateInstallationLength"
-                            value="{newinst>/NewInst/DistMarcIni}">
-                        </Input>
+                        <l:HorizontalLayout id="_IDGenHorizontalLayout">
+                            <l:VerticalLayout id="_IDGenVerticalLayout2ba" width="50%">
+                                <Label id="_IDGenLabel9" text="{i18n>marcIni}" labelFor="MarcIniInput"/>
+                                <Input
+                                    id="MarcIniInput"
+                                    type="Text"
+                                    editable="true"
+                                    required="true"
+                                    value="{newinst>/NewInst/MarcIni}">
+                                </Input>
+                            </l:VerticalLayout>
+                            <l:VerticalLayout id="_IDGenVerticalLayout2bac" width="50%">
+                                <Label id="_IDGenLabel10" text="{i18n>distMarcIni}" labelFor="DistMarcIniInput" />
+                                <Input
+                                    id="DistMarcIniInput"
+                                    type="Number"
+                                    editable="true"
+                                    required="true"
+                                    change=".onRecalculateInstallationLength"
+                                    value="{newinst>/NewInst/DistMarcIni}">
+                                </Input>
+                            </l:VerticalLayout>
+                        </l:HorizontalLayout>
                         <Label id="_IDGenLabel11" text="{i18n>marcFim}" labelFor="MarcFimInput" />
                         <Input
                             id="MarcFimInput"
